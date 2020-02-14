@@ -1,14 +1,17 @@
-/*
-play this: https://www.youtube.com/watch?v=d-diB65scQU
+const express = require("express");
+const PostRouter = require("./router/projects");
+const ActionRouter = require("./router/actions");
+const helmet = require("helmet");
+const cors = require("cors");
+const server = express();
 
-Sing along:
+server.use(express.json());
+server.use(helmet());
+server.use(cors());
+server.use("/api/posts", PostRouter);
+server.use("/api/actions", ActionRouter);
 
-here's a little code I wrote, please read the README word for word, don't worry, you got this
-in every task there may be trouble, but if you worry you make it double, don't worry, you got this
-ain't got no sense of what is REST? just concentrate on learning Express, don't worry, you got this
-your file is getting way too big, bring a Router and make it thin, don't worry, be crafty
-there is no data on that route, just write some code, you'll sort it out… don't worry, just hack it…
-I need this code, but don't know where, perhaps should make some middleware, don't worry, just hack it
-
-Go code!
-*/
+// create server listener
+server.listen(7500, () => {
+  console.log("server is up and running on port 7500!");
+});
