@@ -40,13 +40,21 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+  answer: I learned about express servers, how to import express, and how to listen on a local server. I also learned how to use express router and middleware
+
 - [ ] Describe Middleware?
 
-- [ ] Describe a Resource?
+  answer: middleware is what it sounds like. functions that get passed into the server that run before the request or response is made. this allows us to do things like import helmet for security or create custom middleware for authentication
 
+- [ ] Describe a Resource?
+      answer: a resource is an object that holds data
 - [ ] What can the API return to help clients know if a request was successful?
 
+  answer: an api can return the response or a success message in json format
+
 - [ ] How can we partition our application into sub-applications?
+
+  answer: hmmm thinking of two different solutions depending on what is being asked. my first answer is that express router allows us to better manage our application and end points. another is that we can deploy our endpoints on different servers depending on the uptime needed on the server or the amount of data that needs to be processed might bog down other operations so we seperate.
 
 ## Minimum Viable Product
 
